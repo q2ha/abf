@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مادة الكيمياء</title>
+    <style>
+        body {
+            background-color: #f5ebda; /* خلفية الصفحة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            flex-direction: column; /* ليتحرك المحتوى عموديًا */
+            transition: opacity 0.5s ease; /* تأثير تلاشي للخلفية */
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* عرض المربع */
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .button-container {
+            display: flex; /* لجعل الأزرار في صف واحد */
+            flex-wrap: wrap; /* للسماح بالتفاف الأزرار */
+            justify-content: center; /* مركز الأزرار */
+        }
+
+        .subject-button {
+            background-color: #cc8f61; /* لون الزر */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            padding: 0; /* إلغاء padding */
+            width: 120px; /* عرض الزر */
+            display: flex;
+            flex-direction: column; /* لتنسيق الأيقونة والنص عمودياً */
+            align-items: center; /* لتوسيع الأيقونة والنص */
+            position: relative; /* لجعل الخلفية تحت الأيقونة */
+            overflow: hidden; /* لإخفاء أي محتوى يتجاوز الحدود */
+        }
+
+        .subject-icon {
+            width: 100%; /* ملء الزر */
+            height: auto;
+            object-fit: cover; /* لضبط الأيقونة بشكل مناسب */
+        }
+
+        .subject-label {
+            background-color: rgba(0, 0, 0, 0.7); /* خلفية مظللة */
+            color: #fff;
+            width: 100%;
+            text-align: center; /* محاذاة النص للوسط */
+            padding: 10px 0; /* حواف للنص */
+            position: absolute;
+            bottom: 0; /* لجعل النص في أسفل الزر */
+            font-weight: bold; /* جعل النص عريض */
+            border-radius: 0 0 8px 8px; /* تحديد الزاوية السفلية */
+        }
+
+        .subject-button:hover {
+            background-color: #ecb184; /* لون الزر عند التحويم */
+        }
+
+        .back-button {
+            background-color: #cc8f61; /* لون الزر */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px 20px; /* حواف للزر */
+            font-size: 16px; /* حجم الخط */
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ecb184; /* لون الزر عند التحويم */
+        }
+
+        .scatter {
+            animation: scatter 0.5s forwards;
+        }
+
+        @keyframes scatter {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مادة الكيمياء</h1>
+        <div class="button-container">
+            <button class="subject-button" onclick="navigate('teacher_notifications_chemistry203.html')">
+                <img src="teacher_notifications_icon.png" alt="تنبيهات معلم المادة" class="subject-icon">
+                <div class="subject-label">تنبيهات معلم المادة</div>
+            </button>
+            <button class="subject-button" onclick="navigate('weekly_plan_chemistry.html')">
+                <img src="weekly_plan_icon.png" alt="الخطة الأسبوعية" class="subject-icon">
+                <div class="subject-label">الخطة الأسبوعية</div>
+            </button>
+            <button class="subject-button" onclick="navigate('learning_sources_chemistry.html')">
+                <img src="learning_sources_icon.png" alt="مصادر تعلم" class="subject-icon">
+                <div class="subject-label">مصادر تعلم</div>
+            </button>
+            <button class="subject-button" onclick="navigate('revision_tests_chemistry.html')">
+                <img src="revision_tests_icon.png" alt="اختبارات للمراجعة" class="subject-icon">
+                <div class="subject-label">اختبارات للمراجعة</div>
+            </button>
+        </div>
+
+        <button class="back-button" onclick="navigate('class203.html')">العودة إلى صفحة المواد</button>
+    </div>
+
+    <script>
+        function navigate(url) {
+            document.body.classList.add('scatter'); // إضافة تأثير التشتت
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // مدة التلاشي
+        }
+    </script>
+</body>
+</html>

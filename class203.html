@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شعبة 203 - مواد دراسية</title>
+    <style>
+        body {
+            background-color: #f5ebda; /* خلفية الصفحة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            flex-direction: column; /* ليتحرك المحتوى عموديًا */
+            transition: opacity 0.5s ease; /* تأثير تلاشي للخلفية */
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* عرض المربع */
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .subject-button {
+            background-color: #cc8f61; /* لون الزر */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            padding: 0; /* إلغاء padding */
+            width: 120px; /* عرض الزر */
+            display: flex;
+            flex-direction: column; /* لتنسيق الأيقونة والنص عمودياً */
+            align-items: center; /* لتوسيع الأيقونة والنص */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* لجعل الخلفية تحت الأيقونة */
+            overflow: hidden; /* لإخفاء أي محتوى يتجاوز الحدود */
+        }
+
+        .subject-icon {
+            width: 100%; /* ملء الزر */
+            height: auto;
+            object-fit: cover; /* لضبط الأيقونة بشكل مناسب */
+        }
+
+        .subject-label {
+            background-color: rgba(0, 0, 0, 0.7); /* خلفية مظللة */
+            color: #fff;
+            width: 100%;
+            text-align: center; /* محاذاة النص للوسط */
+            padding: 10px 0; /* حواف للنص */
+            position: absolute;
+            bottom: 0; /* لجعل النص في أسفل الزر */
+            font-weight: bold; /* جعل النص عريض */
+            border-radius: 0 0 8px 8px; /* تحديد الزاوية السفلية */
+        }
+
+        .subject-button:hover {
+            background-color: #ecb184; /* لون الزر عند التحويم */
+        }
+
+        .button-container {
+            display: flex; /* لجعل الأزرار في صف واحد */
+            flex-wrap: wrap; /* للسماح بالتفاف الأزرار */
+            justify-content: center; /* مركز الأزرار */
+        }
+
+        .back-button {
+            background-color: #cc8f61; /* لون الزر */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px 20px; /* حواف للزر */
+            font-size: 16px; /* حجم الخط */
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ecb184; /* لون الزر عند التحويم */
+        }
+
+        .scatter {
+            animation: scatter 0.5s forwards;
+        }
+
+        @keyframes scatter {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مواد شعبة 203</h1>
+        <div class="button-container">
+            <button class="subject-button" onclick="navigate('math203.html')">
+                <img src="math_icon.png" alt="مادة الرياضيات" class="subject-icon">
+                <div class="subject-label">مادة الرياضيات</div>
+            </button>
+            <button class="subject-button" onclick="navigate('english203.html')">
+                <img src="english_icon.png" alt="مادة اللغة الإنجليزية" class="subject-icon">
+                <div class="subject-label">مادة اللغة الإنجليزية</div>
+            </button>
+            <button class="subject-button" onclick="navigate('biology203.html')">
+                <img src="biology_icon.png" alt="مادة الأحياء" class="subject-icon">
+                <div class="subject-label">مادة الأحياء</div>
+            </button>
+            <button class="subject-button" onclick="navigate('chemistry203.html')">
+                <img src="chemistry_icon.png" alt="مادة الكيمياء" class="subject-icon">
+                <div class="subject-label">مادة الكيمياء</div>
+            </button>
+            <button class="subject-button" onclick="navigate('tawhid203.html')">
+                <img src="tawhid_icon.png" alt="مادة التوحيد" class="subject-icon">
+                <div class="subject-label">مادة التوحيد</div>
+            </button>
+            <button class="subject-button" onclick="navigate('arts203.html')">
+                <img src="arts_icon.png" alt="مادة الفنون" class="subject-icon">
+                <div class="subject-label">مادة الفنون</div>
+            </button>
+            <button class="subject-button" onclick="navigate('pe203.html')">
+                <img src="pe_icon.png" alt="مادة اللياقة البدنية" class="subject-icon">
+                <div class="subject-label">مادة اللياقة البدنية</div>
+            </button>
+        </div>
+
+        <button class="back-button" onclick="navigate('classes.html')">العودة إلى صفحة الفصول</button>
+    </div>
+
+    <script>
+        function navigate(url) {
+            document.body.classList.add('scatter'); // إضافة تأثير التشتت
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // مدة التلاشي
+        }
+    </script>
+</body>
+</html>

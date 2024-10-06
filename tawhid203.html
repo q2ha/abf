@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مادة التوحيد</title>
+    <style>
+        body {
+            background-color: #f5ebda; /* خلفية الصفحة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .subject-button {
+            background-color: #cc8f61;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            padding: 0;
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease; /* تأثير التحول */
+        }
+
+        .subject-button:hover {
+            transform: scale(1.05); /* تكبير طفيف عند التحويم */
+        }
+
+        .subject-icon {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .subject-label {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            font-weight: bold;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .back-button {
+            background-color: #cc8f61;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ecb184;
+        }
+
+        .scatter {
+            animation: scatter 0.5s forwards;
+        }
+
+        @keyframes scatter {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مادة التوحيد</h1>
+        <div class="button-container">
+            <button class="subject-button" onclick="window.location.href='teacher_notifications_tawhid203.html'">
+                <img src="teacher_notifications_icon.png" alt="تنبيهات معلم المادة" class="subject-icon">
+                <div class="subject-label">تنبيهات معلم المادة</div>
+            </button>
+            <button class="subject-button" onclick="window.location.href='weekly_plan_tawhid.html'">
+                <img src="weekly_plan_icon.png" alt="الخطة الأسبوعية" class="subject-icon">
+                <div class="subject-label">الخطة الأسبوعية</div>
+            </button>
+            <button class="subject-button" onclick="window.location.href='learning_sources_tawhid.html'">
+                <img src="learning_sources_icon.png" alt="مصادر تعلم" class="subject-icon">
+                <div class="subject-label">مصادر تعلم</div>
+            </button>
+            <button class="subject-button" onclick="window.location.href='revision_tests_tawhid.html'">
+                <img src="revision_tests_icon.png" alt="اختبارات للمراجعة" class="subject-icon">
+                <div class="subject-label">اختبارات للمراجعة</div>
+            </button>
+        </div>
+
+        <button class="back-button" onclick="navigate('class203.html')">العودة إلى صفحة المواد</button>
+    </div>
+
+    <script>
+        function navigate(url) {
+            document.body.classList.add('scatter'); // إضافة تأثير التشتت
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // مدة التلاشي
+        }
+    </script>
+</body>
+</html>

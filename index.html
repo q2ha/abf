@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثانوية عامر بن فهيرة</title>
+    <style>
+        body {
+            background-image: url('aameerbnfohayrhslider.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            transition: opacity 0.5s ease; /* إضافة تأثير تلاشي */
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .classes-button {
+            background-color: #cc8f61;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .classes-button:hover {
+            background-color: #ecb184;
+        }
+
+        .scatter {
+            animation: scatter 0.5s forwards;
+        }
+
+        @keyframes scatter {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="عامر بن فيهرة (1).png" alt="ثانوية عامر بن فهيرة" class="logo">
+            <h1>ثانوية عامر بن فهيرة</h1>
+        </header>
+        <main>
+            <button class="classes-button" onclick="navigate('classes.html')">قائمة الفصول</button>
+        </main>
+    </div>
+
+    <script>
+        function navigate(url) {
+            document.body.classList.add('scatter'); // إضافة تأثير التشتت
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // مدة التلاشي
+        }
+    </script>
+</body>
+</html>

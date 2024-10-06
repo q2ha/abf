@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فصول ثانوية عامر بن فهيرة</title>
+    <style>
+        body {
+            background-color: #f5ebda;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            flex-direction: column;
+            transition: opacity 0.5s ease; /* إضافة تأثير تلاشي */
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .class-button {
+            background-color: #cc8f61;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .class-button:hover {
+            background-color: #ecb184;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .back-button {
+            background-color: #cc8f61;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ecb184;
+        }
+
+        .scatter {
+            animation: scatter 0.5s forwards;
+        }
+
+        @keyframes scatter {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اختر شعبة</h1>
+        <div class="button-container">
+            <button class="class-button" onclick="navigate('class201.html')">شعبة 201</button>
+            <button class="class-button" onclick="navigate('class202.html')">شعبة 202</button>
+            <button class="class-button" onclick="navigate('class203.html')">شعبة 203</button>
+            <button class="class-button" onclick="navigate('class204.html')">شعبة 204</button>
+        </div>
+
+        <button class="back-button" onclick="navigate('index.html')">العودة إلى الصفحة الرئيسية</button>
+    </div>
+
+    <script>
+        function navigate(url) {
+            document.body.classList.add('scatter'); // إضافة تأثير التشتت
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // مدة التلاشي
+        }
+    </script>
+</body>
+</html>

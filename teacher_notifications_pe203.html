@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبيهات معلم مادة اللياقة البدنية</title>
+    <style>
+        body {
+            background-color: #f5ebda; /* خلفية الصفحة */
+            display: flex;
+            justify-content: center; /* مركزة أفقياً */
+            align-items: center; /* مركزة عمودياً */
+            height: 100vh; /* ملء ارتفاع الشاشة */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center; /* محاذاة النص إلى المركز */
+            max-width: 600px; /* الحد الأقصى لعرض المحتوى */
+            width: 100%; /* ملء العرض */
+            padding: 20px; /* إضافة padding للمحتوى */
+            background-color: rgba(255, 255, 255, 0.9); /* خلفية للمحتوى */
+            border-radius: 15px; /* زوايا دائرية */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* تأثير ظل */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .alert {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert-title {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .alert-date {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .back-button {
+            background-color: #cc8f61; /* لون الزر */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px 20px; /* حواف للزر */
+            font-size: 16px; /* حجم الخط */
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ecb184; /* لون الزر عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تنبيهات معلم مادة اللياقة البدنية</h1>
+
+        <div class="alert">
+            <p class="alert-title">تنبيه 1: اختبار قادم</p>
+            <p class="alert-date">التاريخ: 5 أكتوبر 2024</p>
+            <p>تذكير: سيتم إجراء اختبار في نهاية الأسبوع المقبل.</p>
+        </div>
+
+        <div class="alert">
+            <p class="alert-title">تنبيه 2: تغيير في الجدول الزمني</p>
+            <p class="alert-date">التاريخ: 1 أكتوبر 2024</p>
+            <p>يرجى ملاحظة أن الجدول الزمني قد تم تحديثه.</p>
+        </div>
+
+        
+        <!-- يمكنك إضافة المزيد من التنبيهات هنا -->
+
+        <button class="back-button" onclick="window.location.href='pe203.html'">العودة إلى صفحة المادة</button>
+    </div>
+</body>
+</html>
